@@ -5,10 +5,25 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+*.log
+*.pid
 
 # Local MLflow tracking data and generated model artifacts
 mlruns/
 mlflow.db
+
+# Airflow runtime state; keep authored DAGs
+cartvista-mlops/airflow_home/*
+!cartvista-mlops/airflow_home/dags/
+cartvista-mlops/airflow_home/dags/*
+!cartvista-mlops/airflow_home/dags/*.py
+cartvista-mlops/model_export/
+cartvista-mlops/model_export/*
+
+# Generated batch-scoring output
+cartvista-mlops/scored.csv
 
 # OS/editor noise
 .DS_Store
